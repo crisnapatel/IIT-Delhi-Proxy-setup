@@ -44,9 +44,9 @@ http://www.cc.iitd.ac.in/cgi-bin/proxy.phd
 2. Go to **Settings** and search for **proxy**
 3. Open the system proxy settings window
 4. Choose one of the following:
-- Auto-detect proxy settings for this network
 - Use system proxy settings
-- Automatic proxy configuration URL: oxy61.iitd.ac.in/cgi-bin/proxy.cgi
+- Automatic proxy configuration URL: proxy61.iitd.ac.in/cgi-bin/proxy.cgi
+- You could also select Manual proxy configuration. Just enter HTTP and HTTPS details and port in this case
 
 ---
 
