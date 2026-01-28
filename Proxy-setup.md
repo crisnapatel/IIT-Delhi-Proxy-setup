@@ -76,3 +76,24 @@ Add these lines:
 Acquire::http::Proxy "http://proxy61.iitd.ac.in:3128";
 Acquire::https::Proxy "http://proxy61.iitd.ac.in:3128";
 ```
+
+### Different package managers may have different proxy setups!
+
+1. For instance, npm requires you to save proxy info in `~/.npmrc` file
+```bash
+# Cleanup previouse wrong ones if any
+npm config delete https-proxy
+npm config delete registry
+
+# Start fresh
+sudo npm config set proxy http://proxy61.iitd.ac.in:3128
+sudo npm config set https-proxy http://proxy61.iitd.ac.in:3128
+sudo npm config set registry https://registry.npmjs.org/
+```
+`sudo npm ...` looks for proxy info at `/root/.npmrc` not `/home/user/.npmrc`. So, try setting npm proxy accordingly.
+
+2. If your git isn't working
+```bash
+git config --global http.proxy http://127.0.0.1:3128
+git config --global https.proxy http://127.0.0.1:3128
+```
