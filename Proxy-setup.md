@@ -50,7 +50,7 @@ http://www.cc.iitd.ac.in/cgi-bin/proxy.phd
 
 ---
 
-## 2. Terminal Proxy (for apt / git / etc.): so that you can install external libraries/packages etc through your terminal 
+## 2. Terminal Proxy (for  wget etc.): so that you can install external libraries/packages etc through your terminal 
 
 Append the following lines to your `~/.bashrc` file:
 
@@ -60,4 +60,17 @@ export https_proxy=http://proxy61.iitd.ac.in:3128
 export HTTP_PROXY=http://proxy61.iitd.ac.in:3128
 export HTTPS_PROXY=http://proxy61.iitd.ac.in:3128
 export no_proxy=localhost,127.0.0.1
+```
+### why my `sudo apt update` won't work?
+That's because sudo doesn't pass the environment variables by default. Need to configure apt to use the proxy. 
+```bash
+sudo nano /etc/apt/apt.conf.d/95IIT-Delhi-apt-Proxy
+```
+Don't think too much about the filename `95IIT-Delhi-apt-Proxy`. Just choose any file name ensure to have a number as a prefix. You can name it 95-my-proxy or whatever you like.
+
+Then
+Add these lines:
+```bash
+Acquire::http::Proxy "http://proxy61.iitd.ac.in:3128";
+Acquire::https::Proxy "http://proxy61.iitd.ac.in:3128";
 ```
