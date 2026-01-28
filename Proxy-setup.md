@@ -48,6 +48,8 @@ http://www.cc.iitd.ac.in/cgi-bin/proxy.phd
 - Automatic proxy configuration URL: proxy61.iitd.ac.in/cgi-bin/proxy.cgi
 - You could also select Manual proxy configuration. Just enter HTTP and HTTPS details and port in this case
 
+Once done, go to `https://proxy61.iitd.ac.in/cgi-bin/proxy.cgi` enter your kerberos id (not your entery number), password, and login. Leave this page open and browse the internet on other tabs or browsers. Once done browsing, logout. 
+
 ---
 
 ## 2. Terminal Proxy (for  wget etc.): so that you can install external libraries/packages etc through your terminal 
