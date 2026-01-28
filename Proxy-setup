@@ -1,0 +1,21 @@
+Always start by ensuring that your system has correct timezone/time set. 
+
+1. System-wide proxy (GUI)
+There are two ways (Pick one):
+  1. Settings -> Network -> Network Proxy -> Manual
+    You basically go to Network Proxy and turn it on. Then choose `Manual` from `Configuration` panel.
+    - HTTP Proxy: `proxy61.iitd.ac.in` ; Port: `3128`
+    - HTTPS Proxy: `proxy61.iitd.ac.in` ; Port: `3128`
+    - Ignore hosts: localhost,127.0.0.1
+  2. Settings -> Network -> Network Proxy -> Automatic
+    You basically go to Network Proxy and turn it on. Then choose `Automatic` from `Configuration` panel.
+    - Enter: `http://www.cc.iitd.ac.in/cgi-bin/proxy.phd`
+  3. Open your fav browser. Settings -> search for proxy (open proxy settings window)
+    - Choose `Auto-detect proxy settings for this network` or `Use system proxy settings`
+
+2. Terminal proxy (for apt/git/etc): Append your ~/.bashrc file with these lines
+     export http_proxy=http://proxy61.iitd.ac.in:3128
+     export https_proxy=http://proxy61.iitd.ac.in:3128
+     export HTTP_PROXY=http://proxy61.iitd.ac.in:3128
+     export HTTPS_PROXY=http://proxy61.iitd.ac.in:3128
+     export no_proxy=localhost,127.0.0.1
